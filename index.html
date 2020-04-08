@@ -1,15 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-  <script src="index.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="index.js" defer></script>
 </head>
+
 <body>
     <div id="app">
-        {{ message }} 
-      </div>
+        {{ message }}
+    </div>
+    <div id="list-app">
+        <p>My Shopping List!</p>
+        <ul>
+            <li v-for="item in list">
+                {{ item }}
+            </li>
+        </ul>
+    </div>
+    <div id="if-app">
+        <span v-if="seeable">You can see this text!</span>
+        <button v-on:click="toggleMessage">Toggle Message</button>
+    </div>
 </body>
+
 </html>
